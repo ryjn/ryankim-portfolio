@@ -11,7 +11,7 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // disable refresh on submit
-
+    console.log(import.meta.env.VITE_TEMPLATE_ID_TO_ME);
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
