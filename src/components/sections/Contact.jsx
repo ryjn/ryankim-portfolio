@@ -25,22 +25,22 @@ export const Contact = () => {
           response.status,
           response.text,
         );
-        return emailjs.sendForm(
-          import.meta.env.VITE_SERVICE_ID,
-          import.meta.env.VITE_TEMPLATE_ID_TO_USER,
-          e.target,
-          import.meta.env.VITE_PUBLIC_KEY,
-        );
+        //return emailjs.sendForm(
+        //  import.meta.env.VITE_SERVICE_ID,
+        //  import.meta.env.VITE_TEMPLATE_ID_TO_USER,
+        //  e.target,
+        //  import.meta.env.VITE_PUBLIC_KEY,
+        //);
       })
-      .then((response) => {
-        alert("Message Sent!");
-        console.log(
-          "Message to user sent successfully",
-          response.status,
-          response.text,
-        );
-        setFormData({ name: "", email: "", message: "" }); // reset form
-      })
+      //.then((response) => {
+      //  alert("Message Sent!");
+      //  console.log(
+      //    "Message to user sent successfully",
+      //    response.status,
+      //    response.text,
+      //  );
+      //  setFormData({ name: "", email: "", message: "" }); // reset form
+      //})
       .catch((error) => {
         alert("Oops! Something went wrong. Please try again.");
         console.log("Message sending failed", error);
