@@ -9,42 +9,25 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // disable refresh on submit
-
-    emailjs
-      .sendForm(
+    try {
+      // send "new message notice" email (to me)
+      const emailToMe = await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID_TO_ME,
         e.target,
         import.meta.env.VITE_PUBLIC_KEY,
-      )
-      .then((response) => {
-        console.log(
-          "New message notice sent successfully",
-          response.status,
-          response.text,
-        );
-        //return emailjs.sendForm(
-        //  import.meta.env.VITE_SERVICE_ID,
-        //  import.meta.env.VITE_TEMPLATE_ID_TO_USER,
-        //  e.target,
-        //  import.meta.env.VITE_PUBLIC_KEY,
-        //);
-      })
-      //.then((response) => {
-      //  alert("Message Sent!");
-      //  console.log(
-      //    "Message to user sent successfully",
-      //    response.status,
-      //    response.text,
-      //  );
-      //  setFormData({ name: "", email: "", message: "" }); // reset form
-      //})
-      .catch((error) => {
-        alert("Oops! Something went wrong. Please try again.");
-        console.log("Message sending failed", error);
-      });
+      );
+      console.log(
+        "New message notice sent succesfully",
+        emailToMe.status,
+        emailToMe.text,
+      );
+    } catch (error) {
+      alert("Oops! Something went wrong. Please try again.");
+      console.error("Message sending failed", error);
+    }
   };
 
   return (
