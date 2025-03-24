@@ -13,17 +13,30 @@ export const Contact = () => {
     e.preventDefault(); // disable refresh on submit
     try {
       // send "new message notice" email (to me)
-      const emailToMe = await emailjs.sendForm(
+      const emailToUser = await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID_TO_ME,
+        import.meta.env.VITE_TEMPLATE_ID_AUTO_REPLY,
         e.target,
         import.meta.env.VITE_PUBLIC_KEY,
       );
+      const emailToMe = await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID_NEW_MSG,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY,
+      );
+      alert("Message sent succesfully!");
       console.log(
-        "New message notice sent succesfully",
+        "Message to user sent succesfully",
+        emailToUser.status,
+        emailToUser.text,
+      );
+      console.log(
+        "Notice of new message sent successfully",
         emailToMe.status,
         emailToMe.text,
       );
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       alert("Oops! Something went wrong. Please try again.");
       console.error("Message sending failed", error);
