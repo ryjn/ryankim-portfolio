@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 
-export const Contact = () => {
+export const Contact = ({ menuOpen }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +46,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
+      className={`min-h-screen flex items-center justify-center py-20 ${menuOpen ? "opacity-20" : "opacity-100"}`}
     >
       <RevealOnScroll>
         <div className="px-4 w-150">

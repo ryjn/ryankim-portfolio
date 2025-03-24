@@ -1,12 +1,12 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
-export const Projects = () => {
+export const Projects = ({ menuOpen }) => {
   const project1Tech = ["React", "Node.js", "AWS", "Docker"];
 
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-20"
+      className={`min-h-screen flex items-center justify-center py-20 ${menuOpen ? "opacity-20" : "opacity-100"}`}
     >
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">

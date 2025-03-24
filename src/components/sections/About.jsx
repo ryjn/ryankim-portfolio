@@ -1,6 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
-export const About = () => {
+export const About = ({ menuOpen }) => {
   const frontendSkills = [
     "React",
     "Vue",
@@ -15,7 +15,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20"
+      className={`min-h-screen flex items-center justify-center py-20 ${menuOpen ? "opacity-20" : "opacity-100"}`}
     >
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
