@@ -7,11 +7,14 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg ${menuOpen ? "opacity-20" : "opacity-100"}`}
+      className={`fixed top-0 w-full z-40 bg-neutral-100 dark:bg-neutral-800 backdrop-blur-lg border-b border-white/10 shadow-lg ${menuOpen ? "opacity-20" : "opacity-100"}`}
     >
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-xl font-bold text-white">
+          <a
+            href="#home"
+            className="font-mono text-xl font-bold text-black dark:text-white"
+          >
             Ryan<span className="text-blue-500"> Kim</span>
           </a>
           <div

@@ -15,16 +15,20 @@ function App() {
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
-      <div
-        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} bg-black text-gray-100`}
-      >
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Home menuOpen={menuOpen} />
-        <About menuOpen={menuOpen} />
-        <Projects menuOpen={menuOpen} />
-        <Contact menuOpen={menuOpen} />
+      <div className="light">
+        <div className="bg-neutral-100 dark:bg-neutral-900">
+          {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+          <div
+            className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} text-gray-100`}
+          >
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <Home menuOpen={menuOpen} />
+            <About menuOpen={menuOpen} />
+            <Projects menuOpen={menuOpen} />
+            <Contact menuOpen={menuOpen} />
+          </div>
+        </div>
       </div>
     </>
   );
