@@ -1,0 +1,60 @@
+let timelineElements = [
+  {
+    id: 1,
+    title: "Emory University",
+    location: "Atlanta, GA",
+    description: "B.S. Physics",
+    date: "May 2018",
+    icon: "school",
+  },
+  {
+    id: 2,
+    title: "Laboratory Manager",
+    location: "Atlanta, GA",
+    description: "Job description 1",
+    date: "Sept 2018",
+    icon: "work",
+  },
+  {
+    id: 3,
+    title: "Data Analyst",
+    location: "Atlanta, GA",
+    description: "Job description 1",
+    date: "Apr 2019",
+    icon: "work",
+  },
+  {
+    id: 4,
+    title: "Senior Government Consulting Pharmacy Analyst",
+    location: "Atlanta, GA",
+    description: "Job description 1",
+    date: "Nov 2020",
+    icon: "work",
+  },
+  {
+    id: 5,
+    title: "Associate Government Consultant I",
+    location: "Atlanta, GA",
+    description: "Job description 1",
+    date: "Aug 2022",
+    icon: "work",
+  },
+  {
+    id: 6,
+    title: "B.S. Computer Science",
+    location: "Atlanta, GA",
+    description: "Job description 1",
+    date: "Mar 2025",
+    icon: "school",
+  },
+  {
+    id: 7,
+    title: "Associate Government Consultant II",
+    location: "Atlanta, GA",
+    description: "Job description 1",
+    date: "Apr 2025",
+    icon: "work",
+  },
+];
+
+export default timelineElements;

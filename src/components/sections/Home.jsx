@@ -17,12 +17,12 @@ export const Home = ({ menuOpen }) => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-center md:text-left text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent leading-right">
+            <h1 className="text-center md:text-left text-5xl md:text-6xl font-bold pb-5 bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent leading-right">
               Hi, I'm Ryan Kim
             </h1>
-            <p className="text-center md:text-left text-gray-400 text-lg mb-8 max-w-lg mx-auto">
+            <p className="text-center md:text-left text-neutral-900 dark:text-white text-lg mb-8 max-w-lg mx-auto">
               I'm an aspiring Software Engineer, with a strong background in
-              Healthcare data analytics!
+              Healthcare data analytics!{" "}
             </p>
             <div className="flex justify-center space-x-4">
               <a
