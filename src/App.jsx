@@ -38,7 +38,7 @@ function App() {
             />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Home menuOpen={menuOpen} />
-            <About menuOpen={menuOpen} />
+            <About menuOpen={menuOpen} darkMode={darkMode} />
             <Projects menuOpen={menuOpen} />
             <Contact menuOpen={menuOpen} />
           </div>
