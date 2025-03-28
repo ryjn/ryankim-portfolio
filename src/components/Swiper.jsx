@@ -17,6 +17,7 @@ export const SwiperComponent = () => {
     <div className="container">
       <Swiper
         modules={modules}
+        centeredSlides={true}
         spaceBetween={10}
         slidesPerView={"auto"}
         breakpoints={{
@@ -29,7 +30,7 @@ export const SwiperComponent = () => {
         pagination={{ clickable: true }}
         loop={true}
         effect={"coverflow"}
-        coverflowEffect={{ slideShadows: false, depth: 100, rotate: 20 }}
+        coverflowEffect={{ slideShadows: false, depth: 50, rotate: 20 }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
       >
         {swiperElements.map((element) => {
