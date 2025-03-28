@@ -28,10 +28,10 @@ export const About = ({ menuOpen, darkMode }) => {
               I'm a data-driven analyst with a background in healthcare data and
               a passion for software engineering. With a degree in Physics and
               Computer Science, and hands-on experience working on various
-              projects, I thrive at solving complex probelms with efficient and
+              projects, I thrive at solving complex problems with efficient and
               scalable solutions. I'm eager to transition into a software
               engineering role where I can leverage my analytical mindset and
-              technical kills to build impactful applications!
+              technical skills to build impactful applications!
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">

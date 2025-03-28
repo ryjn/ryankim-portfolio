@@ -9,7 +9,7 @@ import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
 import { Timeline } from "./components/Timeline";
-
+import { SwiperComponent } from "./components/Swiper";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,6 +41,7 @@ function App() {
             <About menuOpen={menuOpen} darkMode={darkMode} />
             <Projects menuOpen={menuOpen} darkMode={darkMode} />
             <Contact menuOpen={menuOpen} />
+            <SwiperComponent />
           </div>
         </div>
       </div>
