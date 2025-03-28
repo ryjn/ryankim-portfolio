@@ -39,7 +39,7 @@ function App() {
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Home menuOpen={menuOpen} />
             <About menuOpen={menuOpen} darkMode={darkMode} />
-            <Projects menuOpen={menuOpen} />
+            <Projects menuOpen={menuOpen} darkMode={darkMode} />
             <Contact menuOpen={menuOpen} />
           </div>
         </div>
