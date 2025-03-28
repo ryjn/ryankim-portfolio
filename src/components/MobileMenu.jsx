@@ -1,4 +1,12 @@
-export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+import { Sun, Moon } from "lucide-react";
+
+export const MobileMenu = ({
+  menuOpen,
+  setMenuOpen,
+  darkMode,
+  toggleDarkMode,
+  isBlinking,
+}) => {
   return (
     <div
       className={`fixed top-0 left-0 w-full bg-[rgba(10, 10, 10, 0.8] z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${
@@ -42,6 +50,16 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       >
         Contact
       </a>
+      <button
+        className={`text-neutral-800 dark:text-gray-300 cursor-pointer p-2 rounded-full bg-gray-400 dark:bg-gray-700 ${isBlinking ? "blink" : ""}`}
+        onClick={toggleDarkMode}
+      >
+        {darkMode ? (
+          <Sun size={24} className="text-yellow-300 fill-yellow-300" />
+        ) : (
+          <Moon size={24} className="text-neutral-100 fill-neutral-100" />
+        )}
+      </button>
     </div>
   );
 };

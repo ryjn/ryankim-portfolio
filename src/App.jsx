@@ -36,12 +36,17 @@ function App() {
               toggleDarkMode={toggleDarkMode}
               isBlinking={isBlinking}
             />
-            <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <MobileMenu
+              menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+              darkMode={darkMode}
+              toggleDarkMode={toggleDarkMode}
+              isBlinking={isBlinking}
+            />
             <Home menuOpen={menuOpen} />
             <About menuOpen={menuOpen} darkMode={darkMode} />
             <Projects menuOpen={menuOpen} darkMode={darkMode} />
             <Contact menuOpen={menuOpen} />
-            <SwiperComponent />
           </div>
         </div>
       </div>
