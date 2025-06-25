@@ -36,7 +36,7 @@ let timelineElements = [
   },
   {
     id: 5,
-    title: "Associate Government Consultant I",
+    title: "Associate Government Consultant",
     location: "Mercer - Atlanta, GA",
     description:
       "Led cross-functional teams of analysts and pharmacists in the planning, execution, and delivery of projects as a project lead",
