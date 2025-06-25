@@ -54,7 +54,7 @@ let timelineElements = [
   },
   {
     id: 7,
-    title: "Associate Government Consultant II",
+    title: "Government Healthcare Data Consultant",
     location: "Mercer - Atlanta, GA",
     description: "",
     date: "Apr 2025",
