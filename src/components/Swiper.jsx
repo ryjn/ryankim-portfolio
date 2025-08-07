@@ -11,10 +11,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import "./swiper.css";
+
 export const SwiperComponent = () => {
   const modules = [EffectCoverflow, Navigation, Pagination, Autoplay];
   return (
-    <div className="container">
+    <div className="swiper">
       <Swiper
         modules={modules}
         centeredSlides={true}
@@ -35,12 +37,11 @@ export const SwiperComponent = () => {
       >
         {swiperElements.map((element) => {
           return (
-            <SwiperSlide
-              key={element.id}
-              className="p-6 rounded-xl border border-blue-500/30 text-neutral-900 dark:text-white bg-white dark:bg-neutral-800"
-            >
-              <h3 className="text-xl font-bold mb-2">{element.name}</h3>
-              <p>{element.description}</p>
+            <SwiperSlide key={element.id} className="swiper-card">
+              <h3 className="text-xl font-bold mb-2 text-neutral-800">
+                {element.name}
+              </h3>
+              <p className="text-neutral-800">{element.description}</p>
             </SwiperSlide>
           );
         })}
